@@ -1,0 +1,4 @@
+./assets/
+testdata/
+info.php
+protected/runtime/*
