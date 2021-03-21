@@ -27,10 +27,15 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$this->layout = '//layouts/landing';
+		$this->render('index');
+	}
+
+	public function actionHome() {
 		$this->layout = '//layouts/column2';
 		if(Yii::app()->user->isGuest)
 			$this->redirect(array('login'));
-		else $this->render('index');
+		else $this->render('home');
 	}
 
 	/**

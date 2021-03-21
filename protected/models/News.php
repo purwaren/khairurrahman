@@ -23,6 +23,12 @@ class News extends CActiveRecord
 {
 	const FLAG_PUBLISHED_ACTIVE = 1;
 	const FLAG_PUBLISHED_INACTIVE = 0;
+
+	const CAT_BERITA = 1;
+	const CAT_PENGUMUMAN = 2;
+    const CAT_EXTRA = 3;
+    const CAT_ACHIEVEMENT = 4;
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -133,5 +139,115 @@ class News extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	public function searchExtra()
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+
+		$criteria=new CDbCriteria;
+
+		$criteria->compare('LOWER(tag)', strtolower($this->tag), true);
+		$criteria->compare('flag_published',self::FLAG_PUBLISHED_ACTIVE);
+		$criteria->compare('cat_id',$this->cat_id);
+		$criteria->order = 'timestamp_created DESC, timestamp_updated DESC';
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+			'pagination'=>array(
+				'pageSize'=>5
+			),
+		));
+	}
+
+	public function scopes()
+	{
+		return array(
+			'detail'=>array(
+				'select'=>"id, title, content, permalink, banner, flag_published, DATE_FORMAT(timestamp_created,'%d-%b-%Y %H:%i:%s') AS timestamp_created, user_create" ,
+			),
+			'latest'=>array(
+				'order'=>'timestamp_created DESC'
+			),
+		);
+	}
+
+	/**
+	 * Find latest news for ext.news.ELatestNews
+	 */
+	public function findLatestNews()
+	{
+		$model = self::model()->latest()->findAllByAttributes(array(
+			'flag_published' => self::FLAG_PUBLISHED_ACTIVE,
+			'cat_id'=>self::CAT_BERITA
+		));
+
+		$data = array();
+		if($model)
+		{
+			foreach($model as $row)
+			{
+				$data[] = array(
+					'thumbnail' => $row->banner,
+					'title' => $row->title,
+					'summary' => $row->summary,
+					'link'=>Yii::app()->createUrl('news/'.$row->permalink)
+				);
+			}
+		}
+
+		return $data;
+	}
+
+	public function findHotNews()
+	{
+		$model = self::model()->latest()->findAllByAttributes(array(
+			'cat_id'=>self::CAT_PENGUMUMAN,
+			'flag_published'=>self::FLAG_PUBLISHED_ACTIVE
+		));
+		$data = array();
+		if($model) {
+			foreach ($model as $row) {
+				$data[] = array(
+					'banner' => $row->banner,
+					'title' => $row->title,
+					'summary' => $row->summary,
+					'link' => Yii::app()->createUrl('news/' . $row->permalink)
+				);
+			}
+		}
+		return $data;
+	}
+
+	public function findLatestAchievement()
+    {
+        $model = self::model()->latest()->findAllByAttributes(array(
+            'cat_id'=>self::CAT_ACHIEVEMENT,
+            'flag_published'=>self::FLAG_PUBLISHED_ACTIVE
+        ));
+        $data = array();
+        if($model) {
+            foreach ($model as $row) {
+                $data[] = array(
+                    'thumbnail' => $row->banner,
+                    'title' => $row->title,
+                    'summary' => $row->summary,
+                    'link' => Yii::app()->createUrl('news/' . $row->permalink)
+                );
+            }
+        }
+
+        return $data;
+    }
+
+	/**
+	 * Find page by permalink
+	 */
+	public function findByPermalink($permalink)
+	{
+		return self::model()->detail()->findByAttributes(array(
+				'permalink'=>$permalink,
+				'flag_published'=>self::FLAG_PUBLISHED_ACTIVE
+		));
 	}
 }

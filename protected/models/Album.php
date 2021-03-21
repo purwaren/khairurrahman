@@ -142,4 +142,28 @@ class Album extends CActiveRecord
         AlbumContent::model()->deleteAll($criteria);
         return $this->delete();
     }
+
+	public static function getAllLatestVideo()
+    {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'ID DESC';
+        $criteria->compare('type', self::TYPE_VIDEO);
+        $model = Album::model()->find($criteria);
+
+        if(isset($model))
+        {
+            return AlbumContent::model()->findAllByAttributes(array(
+                'album_id'=>$model->id
+            ));
+        }
+        else return array();
+    }
+
+    public static function getLatestVideoAlbum()
+    {
+        $criteria = new CDbCriteria();
+        $criteria->order = 'ID DESC';
+        $criteria->compare('type', self::TYPE_VIDEO);
+        return Album::model()->find($criteria);
+    }
 }

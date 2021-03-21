@@ -42,6 +42,10 @@ class NewsController extends Controller
 				'users'=>array('@'),
 				'roles'=>array('management','admin')
 			),
+			array('allow',
+				'actions'=>array('display'),
+				'users'=>array('*')
+			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -292,5 +296,22 @@ class NewsController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	public function actionDisplay($permalink)
+	{
+		$this->layout='//layouts/landing';
+		$model = $this->loadModelByPermalink($permalink);
+		$this->render('display',array(
+			'model'=>$model,
+		));
+	}
+
+	private function loadModelByPermalink($permalink)
+	{
+		$model = News::model()->findByPermalink($permalink);
+		if($model === null)
+			throw new CHttpException('404', 'Halaman tidak ditemukan');
+		return $model;
 	}
 }

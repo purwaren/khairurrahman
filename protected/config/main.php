@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Web Administrator',
+	'name'=>'Khairurrahman Islamic Schools',
 
 	'theme'=>'lte',
 	'language'=>'id',
@@ -61,6 +61,11 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
+				'<_c:(news)>/<_a:index>'=>'<_c>/index',
+				'<_c:(news)>/<_a:category>/<name>'=>'<_c>/category',
+				'<_c:(news)>/<_a:achievement>'=>'<_c>/achievement',
+				'<_c:(register)>'=>'registrant/create',
+				'<_c:(page|news)>/<permalink>'=>'<_c>/display',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
@@ -123,14 +128,18 @@ return array(
 		'adminEmail'=>'notification@alulumterpadu.sch.id',
 		'basePath'=>'/ajdevel/www',
 		'uploadPath'=>array(
-			'image'=>'/www/alulum/assets/images/',
-			'banner'=>'/www/alulum/assets/images/',
-			'file'=>'/www/alulum/assets/files/',
-			'album'=>'/www/alulum/assets/album/'
+			'image'=>'assets/images/',
+			'banner'=>'assets/images/',
+			'file'=>'assets/files/',
+			'album'=>'assets/album/'
 		),
 		'cardPath'=>'assets/card/',
-		'imageUrl'=>'http://devel.local/alulum/assets/images/',
-		'fileUrl'=>'http://devel.local/alulum/assets/files/',
-		'albumUrl'=>'http://devel.local/alulum/assets/album/'
+		'imageUrl'=>'/assets/images/',
+		'fileUrl'=>'/assets/files/',
+		'albumUrl'=>'/assets/album/',
+		'header'=>array(
+			'name' => 'SDIT Khairurrahman',
+			'address' => 'Jalan Raya ABC No 13, Kota Medan'
+		),
 	),
 );
