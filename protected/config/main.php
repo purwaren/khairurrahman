@@ -138,8 +138,8 @@ return array(
 		'fileUrl'=>'/assets/files/',
 		'albumUrl'=>'/assets/album/',
 		'header'=>array(
-			'name' => 'SDIT Khairurrahman',
-			'address' => 'Jalan Raya ABC No 13, Kota Medan'
+			'name' => 'SDIT Khairur Rahman',
+			'address' => 'Jalan Arif Rahman Hakim, Gg Suka Hati No. 1 <br />Medan Area, Kota Medan, Sumatra Utara'
 		),
 	),
 );

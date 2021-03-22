@@ -23,8 +23,8 @@
         </div>
         <div class="info col-md-4 col-sm-4">
             <div class="contact pull-right">
-                <p class="phone"><i class="fa fa-phone"></i>(061) 63799232</p>
-                <p class="email"><i class="fa fa-envelope"></i><a href="mailto:khairurrahman@gmail.com">khairurrahman@gmail.com</a></p>
+                <p class="phone"><i class="fa fa-mobile"></i>0852 6046 6046</p>
+                <p class="email"><i class="fa fa-whatsapp"></i>0812 6493 396</p>
             </div><!--//contact-->
         </div><!--//info-->
     </div><!--//header-main-->
@@ -45,12 +45,65 @@
                         array('label'=>'Beranda','url'=>array('/site/index'),'itemOptions'=>array('class'=>'nav-item')),
                         array('label'=>'Tentang Kami <i class="fa fa-angle-down"></i>','url'=>array('#'),
                             'items'=>array(
-                                array('label'=>'Profile Kampus','url'=>array('/page/profil-perguruan-al-ulum')),
-                                array('label'=>'Sejarah Kampus','url'=>array('/page/sejarah-kampus')),
                                 array('label'=>'Visi Misi','url'=>array('/page/visi-misi')),
-                                array('label'=>'Fasilitas Kampus','url'=>array('/page/fasilitas')),
-                                array('label'=>'Dosen','url'=>array('/resources/dosen')),
-                                array('label'=>'Prestasi','url'=>array('/news/achievement')),
+                                array('label'=>'Sejarah Singkat','url'=>array('/page/sejarah-singkat')),
+                                array('label'=>'Profil Pimpinan','url'=>array('/page/profil-pimpinan')),
+                                array('label'=>'Peta Sekolah','url'=>array('/page/peta-sekolah')),
+                                
+                            ),
+                            'linkOptions'=>array(
+                                'class'=>'dropdown-toggle',
+                                'data-toggle'=>'dropdown',
+                                'data-hover'=>'dropdown',
+                                'data-delay'=>0,
+                                'data-close-others'=>'false',
+                            ),
+                            'itemOptions'=>array(
+                                'class'=>'nav-item dropdown'
+                            ),
+                        ),
+                        array('label'=>'Program <i class="fa fa-angle-down"></i>','url'=>array('#'),
+                            'items'=>array(
+                                array('label'=>'Program Kerja','url'=>array('/news/pendidikan-pengajaran')),
+                                array('label'=>'Program Pengembangan Sekolah','url'=>array('/page/penelitian-jurnal')),
+                                array('label'=>'Hubungan Kemitraan','url'=>array('/page/pengabdian-masyarakat')),
+                            ),
+                            'linkOptions'=>array(
+                                'class'=>'dropdown-toggle',
+                                'data-toggle'=>'dropdown',
+                                'data-hover'=>'dropdown',
+                                'data-delay'=>0,
+                                'data-close-others'=>'false',
+                            ),
+                            'itemOptions'=>array(
+                                'class'=>'nav-item dropdown'
+                            ),
+                        ),
+                        array('label'=>'Akademis <i class="fa fa-angle-down"></i>','url'=>array('#'),
+                            'items'=>array(
+                                array('label'=>'Belajar Tahfiz','url'=>array('/news/pendidikan-pengajaran')),
+                                array('label'=>'Belajar Qira\'ah','url'=>array('/page/penelitian-jurnal')),
+                                array('label'=>'Bahasa Arab','url'=>array('/page/pengabdian-masyarakat')),
+                                array('label'=>'Bahasa Inggris','url'=>array('/page/pengabdian-masyarakat')),
+                                array('label'=>'Belajar Beladiri','url'=>array('/page/pengabdian-masyarakat')),
+                            ),
+                            'linkOptions'=>array(
+                                'class'=>'dropdown-toggle',
+                                'data-toggle'=>'dropdown',
+                                'data-hover'=>'dropdown',
+                                'data-delay'=>0,
+                                'data-close-others'=>'false',
+                            ),
+                            'itemOptions'=>array(
+                                'class'=>'nav-item dropdown'
+                            ),
+                        ),
+                        array('label'=>'Kegiatan <i class="fa fa-angle-down"></i>','url'=>array('#'),
+                            'items'=>array(
+                                array('label'=>'PPDB','url'=>array('/news/pendidikan-pengajaran')),
+                                array('label'=>'Ekstra Kurikuler','url'=>array('/page/penelitian-jurnal')),
+                                array('label'=>'Kompetisi','url'=>array('/page/pengabdian-masyarakat')),
+                                array('label'=>'Laporan Kegiatan','url'=>array('/page/pengabdian-masyarakat')),
                             ),
                             'linkOptions'=>array(
                                 'class'=>'dropdown-toggle',
@@ -64,69 +117,8 @@
                             ),
                         ),
                         array('label'=>'Berita','url'=>array('/news'),'itemOptions'=>array('class'=>'nav-item')),
-                        array('label'=>'Program Studi <i class="fa fa-angle-down"></i>','url'=>array('#'),
-                            'items'=>array(
-                                array('label'=>'Perbankan Syariah <i class="fa fa-angle-right"></i>','url'=>array('/page/profil-perbankan-syariah'),
-                                    'items' => array(
-                                            array('label'=> 'Visi Misi', 'url'=>array('/page/')),
-                                            array('label'=> 'Tujuan', 'url'=>array('/page/')),
-                                            array('label'=> 'Sasaran', 'url'=>array('/page/')),
-                                            array('label'=> 'Kurikulum', 'url'=>array('/page/'))
-                                    ),
-                                    'linkOptions'=>array(
-                                        'class'=>'trigger',
-                                        'tabindex'=>'-1'
-                                    ),
-                                    'itemOptions'=>array(
-                                        'class'=>'nav-item dropdown-submenu'
-                                    ),
-                                ),
-                                array('label'=>'Ekonomi Syariah <i class="fa fa-angle-right"></i>','url'=>array('/page/profil-ekonomi-syariah'),
-                                    'items' => array(
-                                        array('label'=> 'Visi Misi', 'url'=>array('/page/')),
-                                        array('label'=> 'Tujuan', 'url'=>array('/page/')),
-                                        array('label'=> 'Sasaran', 'url'=>array('/page/')),
-                                        array('label'=> 'Kurikulum', 'url'=>array('/page/'))
-                                    ),
-                                    'linkOptions'=>array(
-                                        'class'=>'trigger',
-                                        'tabindex'=>'-1'
-                                    ),
-                                    'itemOptions'=>array(
-                                        'class'=>'nav-item dropdown-submenu'
-                                    ),
-                                ),
-                            ),
-                            'linkOptions'=>array(
-                                'class'=>'dropdown-toggle',
-                                'data-toggle'=>'dropdown',
-                                'data-hover'=>'dropdown',
-                                'data-delay'=>0,
-                                'data-close-others'=>'false',
-                            ),
-                            'itemOptions'=>array(
-                                'class'=>'nav-item dropdown'
-                            ),
-                        ),
                         array('label'=>'Galeri','url'=>array('/gallery'),'itemOptions'=>array('class'=>'nav-item')),
                         array('label'=>'Kontak','url'=>array('/site/contact'),'itemOptions'=>array('class'=>'nav-item')),
-                        array('label'=>'Akademik <i class="fa fa-angle-down"></i>','url'=>array('#'),
-                            'items'=>array(
-                                array('label'=>'Pendidikan Pengajaran','url'=>array('/news/pendidikan-pengajaran')),
-                                array('label'=>'Penelitian dan Jurnal','url'=>array('/page/penelitian-jurnal')),
-                                array('label'=>'Pengabdian Masyarakat','url'=>array('/page/pengabdian-masyarakat')),
-                            ),
-                            'linkOptions'=>array(
-                                'class'=>'dropdown-toggle',
-                                'data-toggle'=>'dropdown',
-                                'data-hover'=>'dropdown',
-                                'data-delay'=>0,
-                                'data-close-others'=>'false',
-                            ),
-                            'itemOptions'=>array(
-                                'class'=>'nav-item dropdown'
-                            ),
-                        ),
                     ),
                     'encodeLabel'=>false,
                     'htmlOptions'=>array(

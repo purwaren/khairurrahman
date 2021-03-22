@@ -2,7 +2,10 @@
     <div class="col-md-9">
         <h1 class="section-heading">Mari Bergabung </h1>
         <p>
-            
+            SDIT Khairur Rahman dengan motto "Cerdas, Mencerahkan Semesta" berkomitmen menjadikan
+            Khairur Rahman Islamic Schools sebagai lembaga pembinaan generasi cerdas yang memiliki
+            spirit keilmuan dengan tetap memelihara iman, menggerakkan amal, serta senantiasa 
+            dalam kendali diri menuju ridho Ilahi
         </p>
     </div>
     <div class="col-md-3">
@@ -48,24 +51,7 @@
                 </div><!--//videos-carousel-->
             </div><!--//section-content-->
         </section><!--//video-->
-        <section class="testimonials">
-            <h1 class="section-heading text-highlight"><span class="line">Tabloid</span></h1>
-            <div class="section-content">
-                <div class="testimonials-carousel carousel slide">
-                    <img src="<?php echo Yii::app()->request->baseUrl?>/themes/edu/assets/images/gallery/gallery-thumb-2.jpg" class="img-thumbnail">
-                </div>
-                <div id="testimonials-carousel" class="testimonials-carousel carousel slide">
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <blockquote class="quote">
-                                <p><i class="fa fa-quote-left"></i>I’m very happy interdum eget ipsum. Nunc pulvinar ut nulla eget sollicitudin. In hac habitasse platea dictumst. Integer mattis varius ipsum, posuere posuere est porta vel. Integer metus ligula, blandit ut fermentum a, rhoncus in ligula. Duis luctus.</p>
-                            </blockquote>
-                        </div><!--//item-->
-                    </div><!--//carousel-inner-->
-                </div><!--//testimonials-carousel-->
-                <a class="read-more" href="index">Download<i class="fa fa-chevron-right"></i></a>
-            </div><!--//section-content-->
-        </section><!--//testimonials-->
+        <!--
         <section class="events">
             <h1 class="section-heading text-highlight"><span class="line">Kegiatan</span></h1>
             <div class="section-content">
@@ -78,8 +64,8 @@
                         <h2 class="title">Open Day</h2>
                         <p class="time"><i class="fa fa-clock-o"></i>10:00am - 18:00pm</p>
                         <p class="location"><i class="fa fa-map-marker"></i>East Campus</p>
-                    </div><!--//details-->
-                </div><!--event-item-->
+                    </div>
+                </div>
                 <div class="event-item">
                     <p class="date-label">
                         <span class="month">SEP</span>
@@ -89,10 +75,10 @@
                         <h2 class="title">E-learning at College Green</h2>
                         <p class="time"><i class="fa fa-clock-o"></i>10:00am - 16:00pm</p>
                         <p class="location"><i class="fa fa-map-marker"></i>Learning Center</p>
-                    </div><!--//details-->
-                </div><!--event-item-->
+                    </div>
+                </div>
                 <a class="read-more" href="events.html">All events<i class="fa fa-chevron-right"></i></a>
-            </div><!--//section-content-->
+            </div>
         </section><!--//events-->
     </div><!--//col-md-3-->
 </div><!--//cols-wrapper-->

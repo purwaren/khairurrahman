@@ -46,36 +46,40 @@
         <div class="footer-content">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-3 col-sm-4 about">
+                    <div class="footer-col col-md-4 col-xs-12 about">
                         <div class="footer-col-inner">
-                            <h3>About</h3>
+                            <h3>Sosial Media</h3>
                             <ul>
-                                <li><a href="<?php echo Yii::app()->createUrl('page/profil-perguruan-al-ulum')?>"><i class="fa fa-caret-right"></i>Tentang Kami</a></li>
-                                <li><a href="<?php echo Yii::app()->createUrl('site/contact')?>"><i class="fa fa-caret-right"></i>Kontak Kami</a></li>
-                                <li><a href="<?php echo Yii::app()->createUrl('page/privacy-policy')?>"><i class="fa fa-caret-right"></i>Kerahasiaan Data</a></li>
-                                <li><a href="<?php echo Yii::app()->createUrl('page/terms-and-conditions')?>"><i class="fa fa-caret-right"></i>Syarat dan Ketentuan</a></li>
+                                <li><a href="https://web.facebook.com/sdit.khairurrahman"><i class="fa fa-2x fa-facebook-square"></i> SDIT Khairur Rahman</a></li>
+                                <li><a href="https://www.instagram.com/sditkhairurrahman/"><i class="fa fa-2x fa-instagram"></i>@sditkhairurrahman</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->
+                    </div>
+                    <div class="footer-col col-md-4 col-xs-12 about">
+                        <div class="footer-col-inner">
+                            <h3>Tentang Kami</h3>
+                            <ul>
+                                <li><a href="<?php echo Yii::app()->createUrl('page/visi-misi')?>"><i class="fa fa-caret-right"></i>Visi Misi</a></li>
+                                <li><a href="<?php echo Yii::app()->createUrl('page/sejarah-singkat')?>"><i class="fa fa-caret-right"></i>Sejarah Singkat</a></li>
+                                <li><a href="<?php echo Yii::app()->createUrl('page/profil-pimpinan')?>"><i class="fa fa-caret-right"></i>Profil Pimpinan</a></li>
+                                <li><a href="<?php echo Yii::app()->createUrl('page/peta-sekolah')?>"><i class="fa fa-caret-right"></i>Peta Sekolah</a></li>
                             </ul>
                         </div><!--//footer-col-inner-->
                     </div><!--//foooter-col-->
-                    <div class="footer-col col-md-6 col-sm-8 newsletter">
-                        
-                    </div><!--//foooter-col-->
-                    <div class="footer-col col-md-3 col-sm-12 contact">
+                    <div class="footer-col col-md-4 col-xs-12 contact">
                         <div class="footer-col-inner">
                             <h3>Kontak Kami</h3>
                             <div class="row">
                                 <p class="adr clearfix col-md-12 col-sm-4">
                                     <i class="fa fa-map-marker pull-left"></i>
                                     <span class="adr-group pull-left">
-                                        <span class="street-address">Jalan Tuasan No. 37</span><br>
-                                        <span class="region">Kota Medan</span><br>
-                                        <span class="postal-code">Kode Pos 20222</span><br>
-                                        <span class="country-name">Indonesia</span>
+                                        <span class="street-address">Jalan Arief Rahman Hakim, Gg Suka Hati No. 1</span><br>
+                                        <span class="region">Kec. Medan Area, Kota Medan, Sumatra Utara</span><br>
+                                        <span class="postal-code">Sumatra Utara - 20215, Indonesia</span><br>
                                     </span>
                                 </p>
-                                <p class="tel col-md-12 col-sm-4"><i class="fa fa-phone"></i> (061) 42065275</p>
-                                <p class="tel col-md-12 col-sm-4"><i class="fa fa-fax"></i> (061) 42065275</p>
-                                <p class="email col-md-12 col-sm-4"><i class="fa fa-envelope"></i><a href="#">stebialulum@yahoo.com</a></p>
+                                <p class="tel col-md-12 col-sm-4"><i class="fa fa-mobile"></i>0852 6046 6046</p>
+                                <p class="tel col-md-12 col-sm-4"><i class="fa fa-whatsapp"></i>0812 6493 396</p>
                             </div>
                         </div><!--//footer-col-inner-->
                     </div><!--//foooter-col-->
@@ -85,13 +89,11 @@
         <div class="bottom-bar">
             <div class="container">
                 <div class="row">
-                    <small class="copyright col-md-6 col-sm-12 col-xs-12">Copyright &copy;  Perguruan Islam Al-Ulum Terpadu | Developed By <a href="mailto:putramudamandiri@gmail.com">Putra Muda Mandiri</a> | <?php echo Yii::powered()?></small>
+                    <small class="copyright col-md-6 col-sm-12 col-xs-12">Copyright &copy;  SDIT Khairur Rahman | Developed By <a href="mailto:info@coreinitiative.id">Core Initiative Studio</a> | <?php echo Yii::powered()?></small>
                     <ul class="social pull-right col-md-6 col-sm-12 col-xs-12">
-                        <li><a href="#" ><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" ><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" ><i class="fa fa-youtube"></i></a></li>
-                        <li><a href="#" ><i class="fa fa-google-plus"></i></a></li>
-                        <li class="row-end"><a href="#" ><i class="fa fa-rss"></i></a></li>
+                        <li><a href="https://web.facebook.com/sdit.khairurrahman" ><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="https://www.instagram.com/sditkhairurrahman/" ><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#" ><i class="fa fa-youtube-square"></i></a></li>
                     </ul><!--//social-->
                 </div><!--//row-->
             </div><!--//container-->
