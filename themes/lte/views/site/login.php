@@ -1,6 +1,6 @@
 <div class="login-logo">
-    <?php echo CHtml::image(Yii::app()->theme->baseUrl.'/assets/img/logo.png')?>
-    <a href="../../index2.html" style="color:white;"><b>Web</b>Administrator</a>
+    <?php echo CHtml::image(Yii::app()->theme->baseUrl.'/assets2/images/logo.png')?>
+    <a href="/" style="color:white;"><b>Web</b>Administrator</a>
 </div><!-- /.login-logo -->
 <div class="login-box-body">
     <p class="login-box-msg">Silakan login terlebih dahulu</p>

@@ -119,6 +119,8 @@
                         array('label'=>'Berita','url'=>array('/news'),'itemOptions'=>array('class'=>'nav-item')),
                         array('label'=>'Galeri','url'=>array('/gallery'),'itemOptions'=>array('class'=>'nav-item')),
                         array('label'=>'Kontak','url'=>array('/site/contact'),'itemOptions'=>array('class'=>'nav-item')),
+                        array('label'=>'Login','url'=>array('/site/login'),'itemOptions'=>array('class'=>'nav-item'),'visible'=>Yii::app()->user->isGuest),
+                        array('label'=>'Dashboard','url'=>array('/site/home'),'itemOptions'=>array('class'=>'nav-item'),'visible'=>!Yii::app()->user->isGuest),
                     ),
                     'encodeLabel'=>false,
                     'htmlOptions'=>array(
